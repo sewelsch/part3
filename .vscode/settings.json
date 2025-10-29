@@ -6,5 +6,6 @@
         "error.C": "cpp",
         "page.C": "cpp",
         "testbuf.C": "cpp"
-    }
+    },
+    "makefile.configureOnOpen": false
 }
