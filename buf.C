@@ -170,9 +170,7 @@ const Status BufMgr::readPage(File* file, const int PageNo, Page*& page)
     }
     BufDesc* tmpbuf = &bufTable[frameNum];
     tmpbuf->Set(file, PageNo);
-    // need to set frame number since not passed in as param
-    tmpbuf->frameNo = frameNum;
-
+    
     page = &bufPool[frameNum];
 
   }
@@ -248,8 +246,6 @@ const Status BufMgr::allocPage(File* file, int& pageNo, Page*& page)
   }
   BufDesc* tmpbuf = &bufTable[frameNum];
   tmpbuf->Set(file, pageNum);
-  // need to set frame number since not passed in as param
-  tmpbuf->frameNo = frameNum;// ? TODO: not sure
   pageNo = pageNum;
   page = &bufPool[frameNum];
   
