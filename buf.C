@@ -1,3 +1,16 @@
+// Names - IDs: Anna Sun - [asun47, 9085345479] , Sally Welsch, David Huang
+// Purpose of File: TODO
+//
+// Notes from Anna: make sure to test the code + make any changes you feel fit
+// also for commenting, make sure each function that we changed/wrote, specify/emphasize
+// the input and output params and return vals. Also the specifications say that
+// this file should start with our names and student ids. Idk if it is out netIDs or campus IDs
+// so I put both of mine + feel free to delete the one that's not supposed to be there
+// 
+
+
+
+
 #include <memory.h>
 #include <unistd.h>
 #include <errno.h>
@@ -170,7 +183,7 @@ const Status BufMgr::readPage(File* file, const int PageNo, Page*& page)
     }
     BufDesc* tmpbuf = &bufTable[frameNum];
     tmpbuf->Set(file, PageNo);
-    
+
     page = &bufPool[frameNum];
 
   }
